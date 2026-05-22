@@ -1,0 +1,4 @@
+visit_id,patient_id,name,age,gender,city,doctor_id,doctor_name,specialization,hospital_id,hospital_name,date_id,full_date,disease,cost
+1001,1,Rahul,34,Male,Bangalore,101,Dr Kumar,Cardiology,301,Apollo,201,2025-01-10,Heart Disease,150000
+1002,2,Priya,28,Female,Hyderabad,102,Dr Meena,Dermatology,302,Care,202,2025-02-15,Skin Allergy,2000
+1003,3,Amit,45,Male,Delhi,102,Dr Meena,Dermatology,302,Care,202,2025-02-15,Checkup,1500
