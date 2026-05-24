@@ -24,7 +24,7 @@ def load(conn,df):
     print("Loading.....")
     insert_data(conn,df)
 
-
+    
 # Main Pipeline
 if __name__ == "__main__":
     conn = get_connection()
