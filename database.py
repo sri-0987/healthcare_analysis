@@ -1,20 +1,25 @@
-import psycopg2 # type: ignore
+import psycopg2  # type: ignore
+from getpass import getpass
 
 def get_connection():
-    
     try:
+        # Ask user to enter password
+        password = getpass("Enter PostgreSQL password: ")
+
+        # Create connection
         conn = psycopg2.connect(
             dbname="healthcare_db",
             user="postgres",
-            password="1234",
+            password=password,
             host="localhost",
             port="5432"
         )
+
         print("✅ Database connected successfully")
         return conn
+
     except Exception as e:
         print("❌ Database connection failed:", e)
-
   
 
 def insert_data(conn,df):
