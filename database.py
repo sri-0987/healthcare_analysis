@@ -1,18 +1,18 @@
 import psycopg2  # type: ignore
-from getpass import getpass
+# import psycopg2
+import os
+from dotenv import load_dotenv # type: ignore
+
+load_dotenv()
 
 def get_connection():
     try:
-        # Ask user to enter password
-        password = getpass("Enter PostgreSQL password: ")
-
-        # Create connection
         conn = psycopg2.connect(
-            dbname="healthcare_db",
-            user="postgres",
-            password=password,
-            host="localhost",
-            port="5432"
+            dbname=os.getenv("DB_NAME"),
+            user=os.getenv("DB_USER"),
+            password=os.getenv("DB_PASSWORD"),
+            host=os.getenv("DB_HOST"),
+            port=os.getenv("DB_PORT")
         )
 
         print("✅ Database connected successfully")
@@ -20,8 +20,6 @@ def get_connection():
 
     except Exception as e:
         print("❌ Database connection failed:", e)
-  
-
 def insert_data(conn,df):
     cursor = conn.cursor()
     for _, row in df.iterrows():

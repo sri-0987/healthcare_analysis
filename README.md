@@ -30,8 +30,6 @@ Transforming.....
 Loading.....  
 ETL Completed.....!
 
-def generate_readme():
-    readme_content = """# Healthcare ETL Pipeline
 
 ## 🎯 Project Achievements & Insights
 
