@@ -35,6 +35,9 @@ pip install pandas psycopg2 fastapi uvicorn python-dotenv
 Run ETL:
 python pipeline.py
 
+Run psql:
+psql -U postgres -d healthcare_db
+
 Run API:
 python -m uvicorn api:app --reload
 
