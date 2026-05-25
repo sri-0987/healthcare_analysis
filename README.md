@@ -11,13 +11,13 @@ It includes:
 
 ###Technologies
 
-Python
-Pandas
-PostgreSQL
-FastAPI
-psycopg2
-python-dotenv
-Postman
+-Python
+-Pandas
+-PostgreSQL
+-FastAPI
+-psycopg2
+-python-dotenv
+-Postman
 
 ###How to Run
 Install dependencies
