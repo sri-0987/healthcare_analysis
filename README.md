@@ -1,60 +1,69 @@
-# Healthcare ETL Pipeline
+Healthcare ETL Pipeline & API
 
-## Overview
-This project shows an ETL pipeline using Python and PostgreSQL.
+###Overview
+This project implements an end-to-end Healthcare Data Processing System using Python, PostgreSQL, and FastAPI.
 
-## Features
-- Extract data from CSV
-- Transform data using pandas
-- Load into PostgreSQL
-- Perform analysis
+It includes:
+-ETL pipeline to process healthcare data
+-Data storage using PostgreSQL (dim + fact tables)
+-REST APIs for accessing and managing data
+-API testing using Postman
 
-## Technologies
-- Python
-- Pandas
-- PostgreSQL
+###Technologies
 
-## How to Run
+Python
+Pandas
+PostgreSQL
+FastAPI
+psycopg2
+python-dotenv
+Postman
 
-Install dependencies:
-pip install pandas psycopg2
+###How to Run
+Install dependencies
+pip install pandas psycopg2 fastapi uvicorn python-dotenv
 
-Run:
+-Run ETL Pipeline
 python pipeline.py
 
-## Output
-
-Database connected successfully  
-Extracting.....  
-Transforming.....  
-Loading.....  
+Output
+Extracting.....
+Transforming.....
+Loading.....
 ETL Completed.....!
 
+-Run psql
+psql -U postgres -d healthcare_db
 
-## 🎯 Project Achievements & Insights
+-Run API Server
+python -m uvicorn api:app --reload
 
-Through this ETL pipeline and SQL analysis, I was able to:
+Open:
+http://127.0.0.1:8000/docs
 
-### ✅ 1. Revenue Analysis
-- Identified top-performing doctors contributing the highest revenue
-- Helped understand which doctors drive business value
 
-### ✅ 2. Patient Behavior Analysis
-- Detected repeat patients (loyal patients)
-- Identified high-cost patients for targeted care
+###Project Achievements & Insights
+✅ Revenue Analysis
 
-### ✅ 3. Disease Trend Analysis
-- Found most common diseases across hospitals
-- Calculated average treatment cost per disease
+Identified top-performing doctors
+Calculated total treatment cost
 
-### ✅ 4. Hospital Performance Analysis
-- Compared hospitals based on patient visit count
-- Identified high-load hospitals
+✅ Patient Analysis
 
-### ✅ 5. Time-Based Insights
-- Analyzed monthly patient visit trends
-- Helped understand seasonal patterns in healthcare demand
-### ✅ 1. Revenue Analysis
-- Identified top-performing doctors contributing the highest revenue
-- Helped understand which doctors drive business value
+Detected repeat patients
+Identified high-cost patients
 
+✅ Disease Analysis
+
+Found most common diseases
+Calculated average treatment cost
+
+✅ Hospital Performance
+
+Compared hospitals based on patient volume
+Identified high-load hospitals
+
+✅ Time-Based Trends
+
+Analyzed monthly visit patterns
+Identified seasonal trends
